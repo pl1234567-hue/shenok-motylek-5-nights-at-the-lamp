@@ -1,3 +1,60 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#111a2c"><meta name="description" content="Щенок-Мотылёк и пять ночей у лампы. Сохрани свет до рассвета."><title>Щенок-Мотылёк: 5 ночей у лампы</title><link rel="stylesheet" href="./style.css"></head>
-<body><main id="shell"><aside class="editorial"><div class="eyebrow">ИГРА ПРО ЩЕНКА-МОТЫЛЬКА</div><h1>Темнота ближе.<br><em>Свет — твой.</em></h1><p>Пять ночей в саду. Щенок-Мотылёк охраняет лампу.<br>И свет, который очень хочется сохранить.</p><div class="rule"></div><ol><li><span>01</span>Днём собирай светлячков</li><li><span>02</span>Ночью выбирай цель и раскрывай крылья</li><li><span>03</span>Доживи до пятого рассвета</li></ol><small>@shenok_motylek · Звук необязателен · Прогресс хранится в этом браузере</small></aside><section id="stage" aria-label="Игра «Щенок-Мотылёк: 5 ночей у лампы»"><canvas id="game" width="780" height="1386" aria-label="Поле: нажимайте на светлячков днём и бяк ночью"></canvas><div id="hud" hidden><div class="hud-top"><span id="phase"></span><span id="clock"></span><button id="pause" aria-label="Пауза">Ⅱ</button></div><div class="fuel-line"><label for="fuel">Свет лампы <b id="fuel-label"></b></label><progress id="fuel" max="20" value="12"></progress></div></div><div id="bottom" hidden><span id="hint"></span><span id="attack"></span></div><div id="overlay" aria-live="polite"></div><button id="sound" class="sound" aria-label="Отключить звук">Звук вкл.</button><div id="notice" role="status"></div></section><aside class="margin-note"><span>СОХРАНИ СВЕТ</span><i></i><span>ДО РАССВЕТА</span></aside></main><script type="module" src="./src/main.js"></script></body></html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111a2c">
+<meta name="robots" content="index,follow">
+<title>Щенок-Мотылёк: 5 ночей у лампы</title>
+<meta name="description" content="Щенок-Мотылёк охраняет лампу пять ночей. Днём собирай светлячков, ночью защищай свет до рассвета.">
+<link rel="canonical" href="https://pl1234567-hue.github.io/shenok-motylek-5-nights-at-the-lamp/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Щенок-Мотылёк">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Щенок-Мотылёк: 5 ночей у лампы">
+<meta property="og:description" content="Днём собирай светлячков, ночью защищай лампу. Доживи до пятого рассвета.">
+<meta property="og:url" content="https://pl1234567-hue.github.io/shenok-motylek-5-nights-at-the-lamp/">
+<meta property="og:image" content="https://pl1234567-hue.github.io/shenok-motylek-5-nights-at-the-lamp/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Спящий щенок-мотылёк в круге золотого света">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Щенок-Мотылёк: 5 ночей у лампы">
+<meta name="twitter:description" content="Днём собирай светлячков, ночью защищай лампу. Доживи до пятого рассвета.">
+<meta name="twitter:image" content="https://pl1234567-hue.github.io/shenok-motylek-5-nights-at-the-lamp/og.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1322'/%3E%3Ccircle cx='50' cy='50' r='27' fill='%23f5b342'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%23f7e7c2'/%3E%3C/svg%3E">
+
+<style>
+.tg-cta{display:inline-block;margin-top:18px;padding:12px 22px;border-radius:14px;background:linear-gradient(160deg,#f8d184,#e8a33b);color:#382917;font-weight:700;font-size:16px;line-height:1;text-decoration:none;box-shadow:0 6px 24px #f5b3422e;touch-action:manipulation}
+.tg-cta:hover{background:#ffdc95}
+.tg-cta:focus-visible{outline:3px solid var(--gold,#f5b342);outline-offset:3px}
+#overlay .panel .tg-cta{margin:10px auto 0;display:block;width:fit-content}
+</style>
+
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main id="shell">
+<aside class="editorial">
+<div class="eyebrow">ИГРА ПРО ЩЕНКА-МОТЫЛЬКА</div>
+<h1>Темнота ближе.<br><em>Свет — твой.</em></h1>
+<p>Пять ночей в саду. Щенок-Мотылёк охраняет лампу.<br>И свет, который очень хочется сохранить.</p>
+<div class="rule"></div>
+<ol>
+<li><span>01</span>Днём собирай светлячков</li>
+<li><span>02</span>Ночью выбирай цель и раскрывай крылья</li>
+<li><span>03</span>Доживи до пятого рассвета</li>
+</ol>
+<a class="tg-cta" href="https://t.me/shenok_motylek_5nights_bot" target="_blank" rel="noopener">Играть в Telegram</a>
+<small>Звук необязателен · Прогресс хранится в этом браузере</small>
+</aside>
+<section id="stage" aria-label="Игра «Щенок-Мотылёк: 5 ночей у лампы»"><canvas id="game" width="780" height="1386" aria-label="Поле: нажимайте на светлячков днём и бяк ночью"></canvas><div id="hud" hidden><div class="hud-top"><span id="phase"></span><span id="clock"></span><button id="pause" aria-label="Пауза">Ⅱ</button></div><div class="fuel-line"><label for="fuel">Свет лампы <b id="fuel-label"></b></label><progress id="fuel" max="20" value="12"></progress></div></div><div id="bottom" hidden><span id="hint"></span><span id="attack"></span></div><div id="overlay" aria-live="polite"></div><button id="sound" class="sound" aria-label="Отключить звук">Звук вкл.</button><div id="notice" role="status"></div></section>
+<aside class="margin-note"><span>СОХРАНИ СВЕТ</span><i></i><span>ДО РАССВЕТА</span></aside>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
